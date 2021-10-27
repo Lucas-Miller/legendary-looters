@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public float gravity = -9.81f * 2f;
     public float jumpHeight = 1f;
 
+
     Vector3 velocity;
     bool isGrounded;
     // Start is called before the first frame update
