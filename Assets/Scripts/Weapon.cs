@@ -8,7 +8,7 @@ public class Weapon : Item
 
     //Unique to a Weapon Item
     Animator anim;
-    public GameObject model;
+    public GameObject weaponModel;
     public float damage = 10.0f;
     public float useSpeed = 10.0f;
     public float movementModifier = 0.0f;
@@ -23,12 +23,12 @@ public class Weapon : Item
     {
         if(Input.GetButtonDown("Fire1"))
         {
-            GetComponent<Collider>().isTrigger = true;
+            weaponModel.GetComponent<Collider>().isTrigger = true; //Get collider from the weapon model, if we are currently pressing the attack button, deal damage
             anim.SetBool("attacking", true);
         }
         else if(Input.GetButtonUp("Fire1"))
         {
-            GetComponent<Collider>().isTrigger = false;
+            weaponModel.GetComponent<Collider>().isTrigger = false; //If not attacking, dont do damage.
             anim.SetBool("attacking", false);
         }
     }

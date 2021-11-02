@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Melee
+  - 4Exits
+  - 3Exits
+  - 2Exits
+  - 1Exit
+  - Hallway2Exits
   layers:
   - Default
   - TransparentFX

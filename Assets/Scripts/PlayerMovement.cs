@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+// This brackeys tutorial helped me with some of the setup for the player controler
+// https://www.youtube.com/watch?v=_QajrabyTJc
+//
 public class PlayerMovement : MonoBehaviour
 {
 
@@ -17,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundMask;
     public float speed = 12.0f;
     public float gravity = -9.81f * 2f;
-    public float jumpHeight = 1f;
+    public float jumpHeight = 1.3f;
 
 
     Vector3 velocity;
@@ -45,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.LeftShift))
         {
-            speed = speed * 2.0f;
+            speed *= 1.3f;
         } 
         else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
