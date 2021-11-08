@@ -5,6 +5,7 @@ public class ModuleConnector : MonoBehaviour
 {
 	public string[] Tags;
 	public bool IsDefault;
+	public bool isConnected = false;
 
 	void OnDrawGizmos()
 	{
