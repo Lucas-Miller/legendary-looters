@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 
 // This brackeys tutorial helped me with some of the setup for the player controler
@@ -10,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public CharacterController controller;
+    public TMP_Text healthText;
     public float health = 100f;
     public float armor = 100f;
     public float damage = 10f;
@@ -29,12 +32,14 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SetHealth();
         
     }
 
     // Update is called once per frame
     void Update()
     {
+        SetHealth();
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if(isGrounded && velocity.y < 0)
@@ -65,5 +70,11 @@ public class PlayerMovement : MonoBehaviour
 
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+
+    }
+
+    void SetHealth()
+    {
+        healthText.text = health.ToString(); 
     }
 }
