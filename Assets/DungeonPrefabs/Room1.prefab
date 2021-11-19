@@ -47,7 +47,7 @@ MonoBehaviour:
   - 1Exit
   - 2Exits
   - 3Exits
-  - 4Exits
+  - Hallway2Exits
   IsDefault: 0
   isConnected: 0
 --- !u!1 &1274484003217794198
@@ -159,10 +159,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tags:
-  - 1Exit
-  - 2Exits
-  - 3Exits
-  - 4Exits
+  - Hallway2Exits
+  isStartRoom: 0
 --- !u!54 &7795415729124083024
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     public CharacterController controller;
     public TMP_Text healthText;
-    public float health = 100f;
+    public float health = 10f;
     public float armor = 100f;
     public float damage = 10f;
 
@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 12.0f;
     public float gravity = -9.81f * 2f;
     public float jumpHeight = 1.3f;
-
+    public bool hasHealthPotion = false;
 
     Vector3 velocity;
     bool isGrounded;
@@ -59,6 +59,19 @@ public class PlayerMovement : MonoBehaviour
         else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             speed = 12.0f;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if(hasHealthPotion == true)
+            {
+                if(health < 100f)
+                {
+                    health += 50f;
+                    if (health > 100f)
+                        health = 100f;
+                } 
+            }    
         }
 
         float x = Input.GetAxis("Horizontal");

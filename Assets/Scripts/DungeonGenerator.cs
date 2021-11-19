@@ -11,34 +11,19 @@ public class DungeonGenerator : MonoBehaviour
     public Module[] rooms;      // Array of all possible rooms/hallways/etc
     public Module startingRoom; // Room where player will start and where dungeon is built off of
     public int Iterations = 10;
+    public List<GameObject> allPlacedObj;
 
     // Start is called before the first frame update
     void Start()
     {
         Module startModule = Instantiate(startingRoom, transform.position, transform.rotation); // Instantiate the starting room
-
+        startModule.isStartRoom = true;
+        allPlacedObj.Add(startModule.gameObject); //Add starting room to list of successfully placed rooms
         var pendingConnectors = new List<ModuleConnector>(startModule.GetConnectors()); //Get a list of starting rooms connectors
+        
+        generateDungeon(pendingConnectors);
+        
 
-        for(int i = 0; i < Iterations; ++i)
-        {
-            var newConnectors = new List<ModuleConnector>();
-
-            foreach(var connector in pendingConnectors)
-            {
-                var newTag = GetRandom(connector.Tags); // For each possible connector, get one of the tags that can possibly be connected to it
-                Module newModulePrefab = GetRandomWithTag(rooms, newTag); // With that tag, get the associated prefab that matches
-                Module newModule = Instantiate(newModulePrefab); //Instantiate a new gameobject of the randomly selected prefab
-                ModuleConnector[] newModuleConnectors = newModule.GetConnectors(); //Get the connectors for the newly instantiated prefab
-                var connectorsToMatch = newModuleConnectors.FirstOrDefault(x => x.IsDefault) ?? GetRandom(newModuleConnectors); // Set equal to either first con or default con in editor
-                
-                MatchConnectors(connector, connectorsToMatch);
-                //New Code/////////// 
-
-                /////////////////////
-                newConnectors.AddRange(newModuleConnectors.Where(e => e != connectorsToMatch));
-            }
-            pendingConnectors = newConnectors;
-        }
 
 
     }
@@ -46,8 +31,8 @@ public class DungeonGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
+
+
     }
 
 
@@ -55,6 +40,32 @@ public class DungeonGenerator : MonoBehaviour
     private static TItem GetRandom<TItem>(TItem[] array)
     {
         return array[Random.Range(0, array.Length)];
+    }
+
+    private void generateDungeon(List<ModuleConnector> pendingConnectors)
+    {
+        for (int i = 0; i < Iterations; ++i)
+        {
+            var newConnectors = new List<ModuleConnector>();
+
+            foreach (var connector in pendingConnectors)
+            {
+
+                var newTag = GetRandom(connector.Tags); // For each possible connector, get one of the tags that can possibly be connected to it
+                Module newModulePrefab = GetRandomWithTag(rooms, newTag); // With that tag, get the associated prefab that matches
+                Module newModule = Instantiate(newModulePrefab); //Instantiate a new gameobject of the randomly selected prefab
+
+                ModuleConnector[] newModuleConnectors = newModule.GetConnectors(); //Get the connectors for the newly instantiated prefab
+                var connectorsToMatch = newModuleConnectors.FirstOrDefault(x => x.IsDefault) ?? GetRandom(newModuleConnectors); // Set equal to either first con or default con in editor
+
+                MatchConnectors(connector, connectorsToMatch);
+                newConnectors.AddRange(newModuleConnectors.Where(e => e != connectorsToMatch));
+
+
+            }
+            pendingConnectors = newConnectors;
+        }
+
     }
 
     private static Module GetRandomWithTag(IEnumerable<Module> modules, string tagToMatch)
@@ -72,39 +83,10 @@ public class DungeonGenerator : MonoBehaviour
         var correctiveTranslation = currentConnection.transform.position - newConnection.transform.position;
         newModule.transform.position += correctiveTranslation;
 
-        if(checkCollisions(newModule.gameObject) > 0)
-        {
-            Destroy(newConnection.transform.gameObject);
-        }
-        
-
 
     }
 
 
-    int checkCollisions(GameObject roomObj)
-    {
-        //Use the OverlapBox to detect if there are any other colliders within this box area.
-        //Use the GameObject's centre, half the size (as a radius) and rotation. This creates an invisible box around your GameObject.
-        Collider[] hitColliders = Physics.OverlapBox(roomObj.transform.position, roomObj.transform.localScale / 2, Quaternion.identity);
-        int i = 0;
-        //Check when there is a new collider coming into contact with the box
-        //while (i < hitColliders.Length)
-        //{
-        //    //Output all of the collider names
-        //    Debug.Log("Hit : " + hitColliders[i].name + i);
-        //    //Increase the number of Colliders in the array
-        //    i++;
-        //}
-
-        foreach (Collider hit in hitColliders)
-        {
-            Debug.Log("Hit : " + hitColliders[i].name + " " + i);
-            i++;
-        }
-
-        return i;
-    }
 
 
     private static float signedRotationAngle(Vector3 vector)

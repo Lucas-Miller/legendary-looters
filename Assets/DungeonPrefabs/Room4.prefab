@@ -162,10 +162,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tags:
-  - 1Exit
-  - 2Exits
-  - 3Exits
-  - 4Exits
+  - Hallway2Exits
+  isStartRoom: 0
 --- !u!54 &7768464726772643659
 Rigidbody:
   m_ObjectHideFlags: 0
