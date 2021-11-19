@@ -10,6 +10,7 @@ TagManager:
   - 2Exits
   - 1Exit
   - Hallway2Exits
+  - healthPotion
   layers:
   - Default
   - TransparentFX

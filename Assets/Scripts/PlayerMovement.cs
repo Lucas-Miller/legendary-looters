@@ -67,7 +67,8 @@ public class PlayerMovement : MonoBehaviour
             {
                 if(health < 100f)
                 {
-                    health += 50f;
+                    health += 20f;
+                    hasHealthPotion = false;
                     if (health > 100f)
                         health = 100f;
                 } 
@@ -89,5 +90,18 @@ public class PlayerMovement : MonoBehaviour
     void SetHealth()
     {
         healthText.text = health.ToString(); 
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        Debug.Log(other.gameObject.tag);
+        if(other.gameObject.tag == "healthPotion")
+        {
+            if(hasHealthPotion == false)
+            {
+                hasHealthPotion = true;
+                Destroy(other.gameObject);
+            }
+        }
     }
 }
