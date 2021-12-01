@@ -92,9 +92,20 @@ public class PlayerMovement : MonoBehaviour
         healthText.text = health.ToString(); 
     }
 
+
+    /*
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "EnemyMelee")
+        {
+            health -= 30;
+            SetHealth();
+        }
+    }
+    */
+
     private void OnCollisionEnter(Collision other)
     {
-        Debug.Log(other.gameObject.tag);
         if(other.gameObject.tag == "healthPotion")
         {
             if(hasHealthPotion == false)
@@ -103,5 +114,14 @@ public class PlayerMovement : MonoBehaviour
                 Destroy(other.gameObject);
             }
         }
+
+        if (other.gameObject.tag == "EnemyMelee")
+        {
+            health -= 30;
+            SetHealth();
+        }
+
+
+
     }
 }

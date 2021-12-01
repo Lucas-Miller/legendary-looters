@@ -1,0 +1,187 @@
+fileFormatVersion: 2
+guid: 9a08ae98fd887bb44a62c2cbc61238ac
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      74: -1808350300352362893
+    second: 'Act: Run'
+  - first:
+      74: 4052320832011473132
+    second: 'Act: Left-Punch-F'
+  - first:
+      74: -3360748562135194546
+    second: MaleArm|Charge-Punch-F
+  - first:
+      74: -4313585156375235148
+    second: MaleArm|Charge-Punch-M
+  - first:
+      74: 3660045607658834897
+    second: MaleArm|Idle-F
+  - first:
+      74: -4488218053158090001
+    second: MaleArm|Idle-M
+  - first:
+      74: -8871507648016889841
+    second: MaleArm|Left-Punch-F
+  - first:
+      74: -7752381635814108103
+    second: MaleArm|Left-Punch-M
+  - first:
+      74: 2793931131084721746
+    second: MaleArm|Rest
+  - first:
+      74: -7052514703936154296
+    second: MaleArm|Rest.001
+  - first:
+      74: 5142994157119180273
+    second: MaleArm|Run-F
+  - first:
+      74: 5098862125255890541
+    second: MaleArm|Run-M
+  - first:
+      74: 1213836473357818696
+    second: MaleArm|T-pose
+  - first:
+      74: -1558229624471129005
+    second: MaleArm|T-Pose
+  - first:
+      74: 9191353622560163708
+    second: MaleArm|Walk
+  - first:
+      74: -316100024187825347
+    second: MaleArm|Walk-F
+  - first:
+      74: 4866216319784490431
+    second: FemaleArm|Charge-Punch-F
+  - first:
+      74: -8762183992212930309
+    second: FemaleArm|Charge-Punch-M
+  - first:
+      74: -7830560100727226178
+    second: FemaleArm|Idle-F
+  - first:
+      74: -1845997377925927713
+    second: FemaleArm|Idle-M
+  - first:
+      74: 269216156610960852
+    second: FemaleArm|Left-Punch-F
+  - first:
+      74: -6447004969502083168
+    second: FemaleArm|Left-Punch-M
+  - first:
+      74: -7928322105434337695
+    second: FemaleArm|Rest
+  - first:
+      74: -9093037283717762197
+    second: FemaleArm|Rest.001
+  - first:
+      74: -6077958627966941651
+    second: FemaleArm|Run-F
+  - first:
+      74: -4283816607630278298
+    second: FemaleArm|Run-M
+  - first:
+      74: -4032954803323618419
+    second: FemaleArm|T-pose
+  - first:
+      74: 617629570291086287
+    second: FemaleArm|T-Pose
+  - first:
+      74: -5266177997287787473
+    second: FemaleArm|Walk
+  - first:
+      74: -5901253867981863482
+    second: FemaleArm|Walk-F
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
