@@ -585,6 +585,8 @@ MonoBehaviour:
     type: 3}
   roomCount: 20
   allPlacedRooms: []
+  Enemies:
+  - {fileID: 6278751993284153785, guid: ac242bff7498f224c8c43a5b11c0a3cd, type: 3}
 --- !u!4 &1305773280
 Transform:
   m_ObjectHideFlags: 0

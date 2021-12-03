@@ -1747,7 +1747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tags:
-  - BasicEnemy
+  - aQuickTest
   isStartRoom: 0
 --- !u!1 &6322672016246975781
 GameObject:

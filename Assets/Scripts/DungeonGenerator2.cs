@@ -9,6 +9,7 @@ public class DungeonGenerator2 : MonoBehaviour
     public Module startingRoom; //The first room placed to be built off of
     public int roomCount = 5; //Number of desired rooms
     public List<GameObject> allPlacedRooms; //A list of every room that is already successfully placed
+    public GameObject[] Enemies;
 
     // Start is called before the first frame update
     void Start()
@@ -41,8 +42,9 @@ public class DungeonGenerator2 : MonoBehaviour
             }
             pendingConnections = newConnectors;
 
-
         }
+        spawnEnemies();
+
 
 
     }
@@ -58,6 +60,17 @@ public class DungeonGenerator2 : MonoBehaviour
         currentConnection.isConnected = true;
         newConnection.isConnected = true;
 
+    }
+
+    private void spawnEnemies()
+    {
+        var spawnPoints = GameObject.FindGameObjectsWithTag("EnemySpawner");
+        foreach (var point in spawnPoints)
+        {
+            //Instantiate(Enemies[0], point.transform.position, Quaternion.identity);
+            Debug.Log("Placing Enemy");
+            Instantiate(Enemies[0], point.transform.position, Quaternion.identity);
+        }
     }
 
     private static float signedRotationAngle(Vector3 vector)

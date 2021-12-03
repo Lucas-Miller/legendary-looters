@@ -13,6 +13,7 @@ TagManager:
   - healthPotion
   - EnemyMelee
   - BasicEnemy
+  - EnemySpawner
   layers:
   - Default
   - TransparentFX
