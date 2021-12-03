@@ -120,6 +120,9 @@ ModelImporter:
   - first:
       74: -1234151447854349901
     second: Sword.001|CDA:ObIpo.018
+  - first:
+      74: -1610863427237328480
+    second: Walking
   externalObjects: {}
   materials:
     materialImportMode: 1

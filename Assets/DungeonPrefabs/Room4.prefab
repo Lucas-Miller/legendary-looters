@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7639860023532700134}
   - component: {fileID: 3090639626050892769}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Connector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7639860023532700134
 Transform:
@@ -64,12 +64,12 @@ GameObject:
   - component: {fileID: 3245239181808119821}
   - component: {fileID: 7951966542142651736}
   - component: {fileID: 7768464726772643659}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Room4
   m_TagString: 4Exits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3245239181808119826
 Transform:
@@ -190,12 +190,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3245239183865199552}
   - component: {fileID: 3245239183865199559}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Connector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3245239183865199552
 Transform:
@@ -240,12 +240,12 @@ GameObject:
   m_Component:
   - component: {fileID: 200979013080160037}
   - component: {fileID: 7676990953991182113}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Connector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &200979013080160037
 Transform:
@@ -290,12 +290,12 @@ GameObject:
   m_Component:
   - component: {fileID: 715059438427681865}
   - component: {fileID: 5444375906955093591}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Connector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &715059438427681865
 Transform:

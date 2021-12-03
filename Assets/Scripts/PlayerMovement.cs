@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     public CharacterController controller;
     public TMP_Text healthText;
-    public float health = 10f;
+    public float health = 100f;
     public float armor = 100f;
     public float damage = 10f;
 
@@ -93,16 +93,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    /*
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "EnemyMelee")
-        {
-            health -= 30;
-            SetHealth();
-        }
-    }
-    */
 
     private void OnCollisionEnter(Collision other)
     {

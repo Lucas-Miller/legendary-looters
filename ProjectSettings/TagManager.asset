@@ -12,6 +12,7 @@ TagManager:
   - Hallway2Exits
   - healthPotion
   - EnemyMelee
+  - BasicEnemy
   layers:
   - Default
   - TransparentFX
