@@ -9,8 +9,10 @@ public class PlayerManager : MonoBehaviour
         void Awake()
         {
             instance = this;
+            GameObject.FindGameObjectWithTag("Player");
         }
     #endregion
 
     public GameObject player;
+
 }

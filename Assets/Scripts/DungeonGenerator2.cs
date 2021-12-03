@@ -15,7 +15,9 @@ public class DungeonGenerator2 : MonoBehaviour
     void Start()
     {
         Module startModule = Instantiate(startingRoom); // Place first room, mark it as starting room
-        startModule.isStartRoom = true;         
+        startModule.isStartRoom = true;
+        var player = GameObject.FindGameObjectWithTag("Player");
+        player.transform.position = startModule.transform.position;
         //allPlacedRooms.Add(startModule.gameObject);     // add it to list of placed rooms
 
         List<ModuleConnector> pendingConnections = new List<ModuleConnector>(startModule.GetConnectors()); //List of all connectors of startRoom
