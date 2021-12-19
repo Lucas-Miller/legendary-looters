@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class DungeonGenerator2 : MonoBehaviour
 {
     public Module[] possibleRooms; //Array of all possible rooms
@@ -10,12 +11,19 @@ public class DungeonGenerator2 : MonoBehaviour
     public int roomCount = 5; //Number of desired rooms
     public List<GameObject> allPlacedRooms; //A list of every room that is already successfully placed
     public GameObject[] Enemies;
+    public GameObject healthPotion;
+    //public GameObject moneyBag;
 
     // Start is called before the first frame update
     void Start()
     {
         Module startModule = Instantiate(startingRoom); // Place first room, mark it as starting room
         startModule.isStartRoom = true;
+
+        int k = 0;
+        while (k < 1000)
+            ++k; //A really hacky fix for an issue where unity takes a sec to load objects on scene change
+
         var player = GameObject.FindGameObjectWithTag("Player");
         player.transform.position = startModule.transform.position;
         //allPlacedRooms.Add(startModule.gameObject);     // add it to list of placed rooms
@@ -45,6 +53,10 @@ public class DungeonGenerator2 : MonoBehaviour
             pendingConnections = newConnectors;
 
         }
+        
+
+        
+
         spawnEnemies();
 
 
@@ -73,6 +85,11 @@ public class DungeonGenerator2 : MonoBehaviour
             Debug.Log("Placing Enemy");
             Instantiate(Enemies[0], point.transform.position, Quaternion.identity);
         }
+
+
+
+
+
     }
 
     private static float signedRotationAngle(Vector3 vector)

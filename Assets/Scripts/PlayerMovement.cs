@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
@@ -13,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
 
     public CharacterController controller;
     public TMP_Text healthText;
+    public TMP_Text scoreText;
+    public int score;
     public float health = 100f;
     public float armor = 100f;
     public float damage = 10f;
@@ -25,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 12.0f;
     public float gravity = -9.81f * 2f;
     public float jumpHeight = 1.3f;
-    public bool hasHealthPotion = false;
+    public bool hasHealthPotion = true;
 
     Vector3 velocity;
     bool isGrounded;
@@ -40,6 +43,12 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         SetHealth();
+
+        if (health <= 0)
+        {
+            SceneManager.LoadScene(0);
+        }
+
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if(isGrounded && velocity.y < 0)
@@ -89,7 +98,8 @@ public class PlayerMovement : MonoBehaviour
 
     void SetHealth()
     {
-        healthText.text = health.ToString(); 
+        healthText.text = health.ToString();
+        scoreText.text = score.ToString();
     }
 
 
@@ -103,6 +113,14 @@ public class PlayerMovement : MonoBehaviour
                 hasHealthPotion = true;
                 Destroy(other.gameObject);
             }
+        }
+
+        if(other.gameObject.tag == "bag")
+        {
+            Destroy(other.gameObject);
+            score += Random.RandomRange(1, 1000);
+            SetHealth();
+
         }
 
         if (other.gameObject.tag == "EnemyMelee")
