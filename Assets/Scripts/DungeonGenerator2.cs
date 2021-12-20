@@ -21,7 +21,7 @@ public class DungeonGenerator2 : MonoBehaviour
         startModule.isStartRoom = true;
 
         int k = 0;
-        while (k < 1000)
+        while (k < 10000)
             ++k; //A really hacky fix for an issue where unity takes a sec to load objects on scene change
 
         var player = GameObject.FindGameObjectWithTag("Player");

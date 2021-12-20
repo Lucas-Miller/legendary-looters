@@ -634,7 +634,7 @@ MonoBehaviour:
   - {fileID: 109203261082171513, guid: 1423b768b60ef7f4fa83e8db456108e6, type: 3}
   - {fileID: 5361788151586754075, guid: 6eea8b874dd77db4481942bd59d1fa76, type: 3}
   - {fileID: -5074795143670837042, guid: 7999043d3ec778447afcd896d01e3c84, type: 3}
-  - {fileID: 8011894597819962114, guid: ac242bff7498f224c8c43a5b11c0a3cd, type: 3}
+  - {fileID: 1330746683859889724, guid: 58ca555ab07ce1341a1be90a350ee8bc, type: 3}
   - {fileID: 8011894597819962114, guid: ac242bff7498f224c8c43a5b11c0a3cd, type: 3}
   startingRoom: {fileID: 7951966542142651736, guid: 75f0fb317ddd5da4f88e248f9dbabbe9,
     type: 3}
